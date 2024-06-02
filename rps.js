@@ -141,3 +141,14 @@ function addGameResult() {
     cell3.textContent = computerSelection;
     cell4.textContent = remarks;
 }
+
+
+
+function namesWithVowels(someName) {
+    const vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
+    return vowels.includes(someName[0]);
+  }
+
+  names = ["grape","melon","apple","oranhe"];
+  names.reduce(namesWithVowels);
+  
