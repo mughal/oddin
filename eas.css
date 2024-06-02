@@ -1,0 +1,31 @@
+* {
+    margin: 0; /* Removes margins from all elements */
+    padding: 0; /* Removes padding from all elements */
+    box-sizing: border-box; /* Includes padding and border in the width and height */
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.container {
+    width: 960px;
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+
+.row {
+    display: flex;
+    width: 100%;
+}
+
+.box {
+    border: 1px solid rgb(60, 92, 233); /* Adds a subtle border to each box */
+    width: 100px;
+}

@@ -1,0 +1,37 @@
+:root {
+	--header: 2em;
+	--footer: 2rem;
+	--main: calc(100vh - calc(var(--header) + var(--footer)));
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	border: 0px solid transparent;
+	background: #7a7a7a;
+    --hf-bg: blue;
+    --hf-text: yellow;
+}
+
+#container {
+	border: 0px solid transparent;
+	height: 100vh;
+	color: white;
+}
+#container > * {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#header, #footer {
+	height: var(--header);
+	background: var(--hf-bg);
+    color: var(--hf-text);
+}
+#mainContent {
+	height: var(--main);
+	background: #343434;
+	margin-right: auto;
+	margin-left: auto;
+}
