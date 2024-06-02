@@ -28,7 +28,7 @@ class="book-read">
 class="book-del"
     <button type="button" id="btn-del-book"> Delete</button>
  */
-function bookCard(book, bookIndex){``
+function bookCard(book, bookIndex){
   const bookCardDiv = document.createElement("div");
   const titleDiv = magicDiv(book.title, "book-title" );
   const pagesDiv = magicDiv(book.pages, "book-pages" );
@@ -63,3 +63,14 @@ btn.addEventListener("click", function (e) {
     console.log(e.target);
     console.log("We get this too on every click");
   });
+
+  function displayLibrary(){
+    const bookShelf = document.querySelector(".bookshelf");
+    myLibrary.forEach((book, index) => {
+      const mybookCard = bookCard(book, index);
+  
+      bookShelf.appendChild(mybookCard);
+  });
+  }
+
+  displayLibrary();
