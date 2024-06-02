@@ -15,6 +15,22 @@
             <button type="button" id="btn-add-book"> Add Book </button>
         </div>
     </div>
+    <!-- A modal dialog containing a form -->
+    <dialog id="bookDialog">
+        <form>
+        <p>
+            <label for="book">Book Title</label>
+            <input type="text" name="book" id="book">
+        </p>
+        <div>
+            <button value="cancel" formmethod="dialog">Cancel</button>
+            <button id="confirmBtn" value="default">Confirm</button>
+        </div>
+        </form>
+    </dialog>
+    <p>
+        <button id="showDialog">Show the dialog</button>
+    </p>
     <div class="bookshelf">
         <!-- <div class="book-card" data-index="0">
             <div class="book-title">
