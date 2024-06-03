@@ -98,4 +98,60 @@ btn.addEventListener("click", function (e) {
     bookDialog.close(); // Have to send the select box value here.
   });
   
-  displayLibrary();
+ // displayLibrary();
+  function makeAdding (firstNumber) {
+    // "first" is scoped within the makeAdding function
+    const first = firstNumber;
+    return function resulting (secondNumber) {
+      // "second" is scoped within the resulting function
+      const second = secondNumber;
+      return first + second;
+    }
+  }
+  // but we've not seen an example of a "function"
+  // being returned, thus far - how do we use it?
+  
+  const add5 = makeAdding(5);
+  console.log(add5(2)) // logs 7
+  
+  const User = function(name) {
+    this.name = name;
+    this.discordName = "@" + name;
+  }
+
+  
+  const user1 = new User("Yasir");
+  console.log(user1);
+  
+  // function createUser (name) {
+  //   const discordName = "@" + name;
+  //   return {name, discordName};
+  // }
+
+  // const user2 = createUser("factoryAli");
+  // console.log(user2);
+
+  // const name = "Fancy Way";
+  // const age = 29;
+  // const fancyObj = {name, age};
+  // console.log(fancyObj);
+
+
+
+  // // Learn Deconstructing
+
+  // const obj = {a: 10, b: 20, c: 30};
+  // const { a:x, b:y } = obj;
+  // console.log(`x = ${x} and y = ${y}`);
+
+  function createUser (name) {
+    const discordName = "@" + name;
+    let reputation = 0;
+    const getReputation = () => reputation;
+    const giveReputation = () => reputation++;
+
+    return { name, discordName, getReputation, giveReputation };
+
+  }
+
+  
